@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ObservationAppApp: App {
+    @State private var globalState = GlobalState()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(globalState)
         }
     }
 }
